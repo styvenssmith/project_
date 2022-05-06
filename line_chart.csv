@@ -1,13 +1,22 @@
-year, category, n
-5, Best, 0.66
-5, Good, 1.625
-5, Less accomplished, 1.33
-5, Professional, 1.75
-6, Best, 2.85
-6, Good, 2.52
-6, Less accomplished, 3.95
-6, Professional, 2.56
-7, Best, 2.25
-7, Good, 4.12
-7, Less accomplished, 4.28
-7, Professional, 3.87
+year,	name,	n
+1880,	Helen,	636
+1880,	Amanda,	241
+1880,	Betty	,117
+1880,	Dorothy,	112
+1880,	Linda,	27
+1880,	Deborah,	12
+1880,	Jessica,	7
+1881,	Helen,	612
+1881,	Amanda,	263
+1881,	Betty	,112
+1881,	Dorothy,	109
+1881,	Linda,	38
+1881,	Deborah,	14
+1881,	Jessica,	7
+1882,	Helen,	838
+1882,	Amanda,	288
+1882,	Betty	,123
+1882,	Dorothy	,115
+1882,	Linda	,36
+1882,	Deborah	,15
+1882,	Jessica	,8
