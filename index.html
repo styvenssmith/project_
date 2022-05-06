@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 
-<title>title</title>
-
-
 <meta charset="utf-8">
 
 <script src="https://d3js.org/d3.v4.js"></script>
 
 
+<title>The importance of practice</title>
+<h1>How important is practice</h1>
+<p style="font-family:courier;">Whenever we want to develop a skill wether that is as an athlete, student, etc. We are always reminded that in order to achieve mastery and become world class that we must practice. In my visualisation I want to look at the different practice habits of violin players. The data consists of violin players of different skill levels. Those who are considered world class(best), good, less accomplished, and individuals who are professionals.</p>
+
+
+
+
+
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+<div id="chart1"></div>
+<p style="font-family:courier;">In the above bar chart we look at the mean number of years spent practicing, ranked competitions attended, and the average age that they began practicing. As can be obviously seen those who are the best and those who are professionals spent the most amount of time practicing and attending ranked competitions.</p>
+<div id ="chart2"></div>
+
 
 <script>
 
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 30, bottom: 20, left: 50},
-    width = 460 - margin.left - margin.right,
+    width = 600 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
+var svg = d3.select("#chart1")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -44,6 +52,7 @@ d3.csv("https://raw.githubusercontent.com/styvenssmith/project_/main/bar_data.cs
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).tickSizeOuter(0));
+    
 
   // Add Y axis
   var y = d3.scaleLinear()
@@ -55,7 +64,7 @@ d3.csv("https://raw.githubusercontent.com/styvenssmith/project_/main/bar_data.cs
   // color palette = one color per subgroup
   var color = d3.scaleOrdinal()
     .domain(subgroups)
-    .range(['#C7EFCF','#FE5F55','#EEF5DB'])
+    .range(['#FFD500','#1E00FF','#FF00F7'])
 
   //stack the data? --> stack per subgroup
   var stackedData = d3.stack()
@@ -68,7 +77,7 @@ d3.csv("https://raw.githubusercontent.com/styvenssmith/project_/main/bar_data.cs
   // ----------------
   // Create a tooltip
   // ----------------
-  var tooltip = d3.select("#my_dataviz")
+  var tooltip = d3.select("#chart1")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -120,5 +129,10 @@ d3.csv("https://raw.githubusercontent.com/styvenssmith/project_/main/bar_data.cs
       .on("mouseleave", mouseleave)
 
 })
+
+</script>
+
+<script>
+
 
 </script>
